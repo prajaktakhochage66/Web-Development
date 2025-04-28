@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Timetable</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Light soothing background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        th, td {
+            border: 2px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 14px;
+        }
+        th {
+            background-color: #4da6ff; /* Light blue for header */
+            color: white;
+        }
+        td {
+            background-color: #e6f2ff; /* Slight blue tint for normal cells */
+        }
+        td[rowspan] {
+            background-color: #b3e6ff; /* Break column - cool blue */
+            font-weight: bold;
+            font-size: 16px;
+            color: #003366;
+        }
+        tr:nth-child(even) td:not([rowspan]) {
+            background-color: #f9f9f9;
+        }
+        tr:hover td {
+            background-color: #d6f0ff;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Roll No = 149</h1>
+    <table>
+        <tr>
+            <th><sub>Day</sub>\<sup>Time</sup></th>
+            <th>9:00 to 11:00</th>
+            <th rowspan="7" width="50px">
+                B <br>R <br>E <br>A <br>K
+            </th>
+            <th>11:15 to 12:15</th>
+            <th>12:15 to 1:15</th>
+            <th rowspan="7" width="50px">
+                B <br>R <br>E <br>A <br>K
+            </th>
+            <th>2:00 to 3:00</th>
+            <th>3:00 to 4:00</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>S1:(DSL)(Lab 8)<br>S2:(AOOC)(Lab 5)<br>S3:(TPMS)(Lab 11)<br>S4:(TTL)(Lab 10)<br>S5:(TTL)(Lab 12)<br>S6:(WD)(Lab 2)</td>
+            <td>DS(L)</td>
+            <td>MDM-II</td>
+            <td>AT(L)</td>
+            <td>ES(L)</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>S1:(WD)(Lab 2)<br>S2:(DSL)(Lab 8)<br>S3:(AOOC)(Lab 5)<br>S4:(TPMS)(Lab 11)<br>S5:(TTL)(Lab 10)<br>S6:(TTL)(Lab 12)</td>
+            <td>AT(L)</td>
+            <td>DS(L)</td>
+            <td>ES(L)</td>
+            <td>WD(L)</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>S1:(TTL)(Lab 12)<br>S2:(WD)(Lab 2)<br>S3:(DSL)(Lab 8)<br>S4:(AOOC)(Lab 5)<br>S5:(TPMS)(Lab 11)<br>S6:(TTL)(Lab 10)</td>
+            <td>AOOC(L)</td>
+            <td>MDM-II</td>
+            <td>Dept. Activity</td>
+            <td>Dept. Activity</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>S1:(TTL)(Lab 10)<br>S2:(TTL)(Lab 12)<br>S3:(WD)(Lab 2)<br>S4:(DSL)(Lab 8)<br>S5:(AOOC)(Lab 5)<br>S6:(TPMS)(Lab 11)</td>
+            <td>AOOC(L)</td>
+            <td>DS(L)</td>
+            <td>AT(L)</td>
+            <td>OEC-II</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>S1:(TPMS)(Lab 11)<br>S2:(TTL)(Lab 10)<br>S3:(TTL)(Lab 12)<br>S4:(WD)(Lab 2)<br>S5:(DSL)(Lab 8)<br>S6:(AOOC)(Lab 5)</td>
+            <td colspan="2">
+                S1:(AOOC)(Lab 5)<br>S2:(TPMS)(Lab 11)<br>S3:(TTL)(Lab 10)<br>S4:(TTL)(Lab 12)<br>S5:(WD)(Lab 2)<br>S6:(DSL)(Lab 8)
+            </td>
+            <td>TPMS(L)</td>
+            <td>OEC-II</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>LL(L)</td>
+            <td colspan="2">LL(L)<br>self</td>
+            <td>Dept. Activity</td>
+            <td>Dept. Activity</td>
+        </tr>
+    </table>
+</body>
+</html>
