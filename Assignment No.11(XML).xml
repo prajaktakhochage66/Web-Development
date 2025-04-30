@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<body>
+
+    <students>
+        <student>
+            <id>102</id>
+            <name>Prem Khochage</name>
+            <age>18</age>
+            <department>Artificial Intelligence 🤖</department>
+            <email>prem123@gamil.com</email>
+        </student>
+        <student>
+            <id>103</id>
+            <name>Prajakta Khochage</name>
+            <age>21</age>
+            <department>Computer Science 💻</department>
+            <email>prajaktakhochage@gmail.com</email>
+        </student>
+        <student>
+            <id>105</id>
+            <name>Archana Khochage</name>
+            <age>27</age>
+            <department>Data Science 📊</department>
+            <email>archanakhochage@gmail.com</email>
+        </student>
+    </students>
+
+</body>
+</html>
