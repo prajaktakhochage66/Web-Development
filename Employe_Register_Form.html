@@ -1,123 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 9</title>
-    <style>
-        body,
-        html {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #eef2f3;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Registration</title>
 
-        .form-container {
-            width: 400px;
-            padding: 30px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            background-color: #ffffff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #a8edea, #fed6e3);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        h1 {
-            text-align: center;
-            color: #333;
-        }
+    .form-container {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+      width: 400px;
+    }
 
-        label {
-            display: block;
-            margin: 12px 0 5px;
-            color: #333;
-            font-weight: bold;
-        }
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        input[type="date"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #aaa;
-        }
+    label {
+      display: block;
+      margin: 12px 0 5px;
+      font-weight: 600;
+      color: #444;
+    }
 
-        input[type="radio"] {
-            margin-right: 5px;
-        }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: border 0.3s ease;
+    }
 
-        .radio-group label {
-            font-weight: normal;
-            margin-right: 15px;
-        }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="date"]:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #007acc;
+      outline: none;
+    }
 
-        input[type="button"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+    .radio-group {
+      margin-bottom: 10px;
+    }
 
-        input[type="button"]:hover {
-            background-color: #45a049;
-        }
-    </style>
+    .radio-group label {
+      margin-right: 15px;
+      font-weight: normal;
+      color: #555;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    input[type="button"] {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #36d1dc, #5b86e5);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="button"]:hover {
+      background: linear-gradient(to right, #5b86e5, #36d1dc);
+    }
+  </style>
 </head>
 <body>
-    <div class="form-container">
-        <h1>Employee Registration Form</h1>
-        <form>
-            <label for="fname">First Name:</label>
-            <input type="text" name="fname" value="" required>
 
-            <label for="lname">Last Name:</label>
-            <input type="text" name="lname" value="" required>
+  <div class="form-container">
+    <h1>Employee Registration</h1>
 
-            <label>Gender:</label>
-            <div class="radio-group">
-                <label><input type="radio" name="gender" value="male"> Male</label>
-                <label><input type="radio" name="gender" value="female"> Female</label>
-                <label><input type="radio" name="gender" value="other"> Other</label>
-            </div>
+    <form>
+       
+      <label for="fname">First Name:</label>
+      <input type="text" name="fname" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+      <label for="lname">Last Name:</label>
+      <input type="text" name="lname" required>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password"
-                   pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
-                   title="Password must contain at least one number, one letter, one special character, and be at least 8 characters long" required>
+      <label>Gender:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </div>
 
-            <label for="address">Address:</label>
-            <textarea name="address" rows="3" required></textarea>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-            <label for="qualification">Qualification:</label>
-            <select name="qualification" required>
-                <option value="Btech">Btech</option>
-                <option value="BCA">BCA</option>
-                <option value="MBA">MBA</option>
-                <option value="Mtech">Mtech</option>
-                <option value="Mcom">Mcom</option>
-                <option value="BBA">BBA</option>
-            </select>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"
+        pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+        title="Password must contain at least one number, one letter, one special character, and be at least 8 characters long" required>
 
-            <label for="dob">DOB of Employee:</label>
-            <input type="date" name="dob" required>
+      <label for="address">Address:</label>
+      <textarea name="address" rows="3" required></textarea>
 
-            <input type="button" value="Submit the Form!">
-        </form>
-    </div>
+      <label for="qualification">Qualification:</label>
+      <select name="qualification" required>
+        <option value="">-- Select --</option>
+        <option value="Btech">Btech</option>
+        <option value="BCA">BCA</option>
+        <option value="MBA">MBA</option>
+        <option value="Mtech">Mtech</option>
+        <option value="Mcom">Mcom</option>
+        <option value="BBA">BBA</option>
+      </select>
+
+      <label for="dob">DOB of Employee:</label>
+      <input type="date" name="dob" required>
+
+      <input type="button" value="Submit the Form!">
+    </form>
+  </div>
 </body>
 </html>
